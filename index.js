@@ -1,12 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const sql = require("mssql");
+const cors = require("cors");
 
 const app = express();
 
 //Middleware
 app.use(bodyParser.json());
 app.use(express.json());
+app.use(cors());
 
 //SQL Server configuration
 var dbConfig = {
